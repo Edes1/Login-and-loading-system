@@ -1,47 +1,33 @@
-------
-Testing Code Not Completd 35 % 
-Script one in League Poland 
-later Scripts In League Englis
-------
-
+//This is Loading and menu system script
+//Author  Nix
+ 
+#include <chrono>
 #include <iostream>
 
-int main() 
-{
-  int x = 250;
-  int y = 500;
-  int z = 750;
-  int a = 1000;
-  
-     std::cout << "Uruhamianie Programu \n";
-     std::cout << "Prosze Czkeac \n";
-     std::cout << " 5% \n";
-     std::cout << " 25 % \n";
-     std::cout << " 50 % \n";
-     std::cout << " 75 % \n";
-     std::cout << " 100 % \n";
-     std::cout << " Zaloguj sie \n";
-     std::cout <<  "Najpierw Name Potem Hasło \n";
- 
-}
---------
-#include <iostream>
+using namespace std;
 
-int main() 
-{
-  int x = 250;
-  int y = 500;
-  int z = 750;
-  int a = 1000;
-  
-     std::cout << "loading Program \n";
-     std::cout << "Please wait \n";
-     std::cout << " 5% \n";
-     std::cout << " 25 % \n";
-     std::cout << " 50 % \n";
-     std::cout << " 75 % \n";
-     std::cout << " 100 % \n";
-     std::cout << " Login\n";
-     std::cout <<  "First Name  later Password \n";
- 
+int main() {
+  std::cout << "loading Program \n";
+  std::cout << "Please Wait. \n";
+
+  float simulation_duration = 0.0;
+  float maximum_duration = 10.0;
+  auto time_since_start_or_last_asterisk = chrono::high_resolution_clock::now();
+  do {
+
+    // Code for simulation
+    auto current_time = chrono::high_resolution_clock::now();
+    std::chrono::duration<double> time_since_last_asterisk =
+        current_time - time_since_start_or_last_asterisk;
+    if (time_since_last_asterisk.count() >= 2.0) {
+      cout << "*";
+      cout.flush();
+      simulation_duration += time_since_last_asterisk.count();
+      time_since_start_or_last_asterisk = current_time;
+    }
+
+  } while (simulation_duration < maximum_duration);
+  cout << endl;
+  std::cout << "Welcome to menu script. \n";
+  std::cout << "This is a new world. \n";
 }
