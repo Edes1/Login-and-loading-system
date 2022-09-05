@@ -1,3 +1,3 @@
-# Login-and-loading-system
-Hello My First Script Login and loading system
-Scripts Not Completed \ Complted in 35 %
+# loading-system-and-menu-system
+Hello this is a  My First Script loading system and menu system
+Scripts Not Completed \ Completed in 90%
